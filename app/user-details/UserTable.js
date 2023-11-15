@@ -1,6 +1,8 @@
 'use client';
 import userData from '../../public/database/users.json';
 import React, { useState, useEffect } from 'react';
+import Report from './report'
+import Modal from './Modal';
 
 const UserDetails = () => {
     const [users, setUsers] = useState([]);
@@ -14,7 +16,18 @@ const UserDetails = () => {
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
     };
+    const [selectedRow, setSelectedRow] = useState(null);
 
+    const handleRowClick = (row) => {
+        console.log(row);
+        setSelectedRow(row);
+        console.log(selectedRow);
+        setIsModalOpen(!isModalOpen);
+    };
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+      };
     // Filter users based on the search term
     const filteredUsers = users.filter((user) =>
         user.username.toLowerCase().includes(searchTerm.toLowerCase())
@@ -22,6 +35,7 @@ const UserDetails = () => {
 
     return (
         <div>
+
             <h1 className="text-2xl font-semibold mb-4">User Details</h1>
             <input
                 type="text"
@@ -30,7 +44,10 @@ const UserDetails = () => {
                 onChange={handleSearch}
                 className="px-4 py-2 border rounded mb-4"
             />
-
+            <Modal isOpen={isModalOpen} onClose={toggleModal}>
+                {/* Pass selectedRow to the Report component */}
+                {selectedRow && <Report selectedRow={selectedRow} />}
+            </Modal>
             <table className="min-w-full border border-gray-300">
                 <thead className="bg-gray-200">
                     <tr>
@@ -43,7 +60,7 @@ const UserDetails = () => {
                 </thead>
                 <tbody>
                     {filteredUsers.map((user) => (
-                        <tr key={user.id} className="hover:bg-gray-100">
+                        <tr key={user.id} className="hover:bg-gray-100" onClick={() => handleRowClick(user)}>
                             <td className="py-2 px-4 border-b">{user.id}</td>
                             <td className="py-2 px-4 border-b">{user.username}</td>
                             <td className="py-2 px-4 border-b">{user.email}</td>
@@ -53,6 +70,7 @@ const UserDetails = () => {
                     ))}
                 </tbody>
             </table>
+
         </div>
     );
 };
