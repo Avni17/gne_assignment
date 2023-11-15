@@ -2,7 +2,7 @@
 import userData from '../../public/database/users.json';
 import React, { useState, useEffect } from 'react';
 import Report from './report'
-import Modal from './Modal';
+import Modal from './modal';
 
 const UserDetails = () => {
     const [users, setUsers] = useState([]);
