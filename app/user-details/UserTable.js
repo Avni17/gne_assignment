@@ -26,8 +26,8 @@ const UserDetails = () => {
         // Your logic to calculate column widths based on your styling and layout
         const widths = {
             id: 'w-16',  // Adjust as needed
-            username: 'w-32',
-            email: 'w-40',
+            username: 'w-16',
+            email: 'w-16',
             phone: 'w-24',
             creationDate: 'w-40',
         };

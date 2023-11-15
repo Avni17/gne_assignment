@@ -18,7 +18,7 @@ const SearchInput = ({ label, value, onChange }) => {
                     placeholder={`Search by ${label}`}
                     value={value}
                     onChange={onChange}
-                    className={`px-2 py-1 border rounded text-black`}
+                    className={`px-2 py-1 border rounded text-black w-32`}
                     onClick={handleInputClick}
                 />
             )}
