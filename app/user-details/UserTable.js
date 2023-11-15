@@ -34,11 +34,11 @@ const UserDetails = () => {
             <table className="min-w-full border border-gray-300">
                 <thead className="bg-gray-200">
                     <tr>
-                        <th className="py-2 px-4 border-b">ID</th>
-                        <th className="py-2 px-4 border-b">Username</th>
-                        <th className="py-2 px-4 border-b">Email</th>
-                        <th className="py-2 px-4 border-b">Phone</th>
-                        <th className="py-2 px-4 border-b">Creation Date</th>
+                        <th className="py-2 px-4 border-b text-left">ID</th>
+                        <th className="py-2 px-4 border-b text-left">Username</th>
+                        <th className="py-2 px-4 border-b text-left">Email</th>
+                        <th className="py-2 px-4 border-b text-left">Phone</th>
+                        <th className="py-2 px-4 border-b text-left">Creation Date</th>
                     </tr>
                 </thead>
                 <tbody>
