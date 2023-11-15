@@ -3,6 +3,7 @@ import userData from '../../public/database/users.json';
 import React, { useState, useEffect } from 'react';
 import Report from './report'
 import Modal from './modal';
+import SearchInput from './searchInput';
 
 const UserDetails = () => {
     const [users, setUsers] = useState([]);
@@ -53,7 +54,7 @@ const UserDetails = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen);
-      };
+    };
     // Filter users based on the search term
     const filteredUsers = users.filter((user) => {
         const matchesSearch = user.id.toString().includes(searchTerm) || user.username.toLowerCase().includes(searchTerm.toLowerCase()) || user.email.toLowerCase().includes(searchTerm.toLowerCase()) || user.phone.toLowerCase().includes(searchTerm.toLowerCase()) || user.creationDate.toLowerCase().includes(searchTerm.toLowerCase());
@@ -84,41 +85,36 @@ const UserDetails = () => {
             <table className="min-w-full border border-gray-300">
                 <thead className="bg-black-200">
                     <tr>
-                        <th className="py-2 px-4 border-b text-left">ID <br/> <input
-                            type="text"
-                            placeholder="Search by ID"
+                        <SearchInput
+                            label="ID"
                             value={searchById}
                             onChange={(e) => setSearchById(e.target.value)}
-                            className={`px-2 py-1 border rounded ${setInputWidth('id')}`}
-                        /></th>
-                        <th className="py-2 px-4 border-b text-left">Username <br/><input
-                            type="text"
-                            placeholder="Search by Username"
+                           
+                        />
+                        <SearchInput
+                            label="Username"
                             value={searchByUsername}
                             onChange={(e) => setSearchByUsername(e.target.value)}
-                            className={`px-2 py-1 border rounded ${setInputWidth('username')}`}
-                        /></th>
-                        <th className="py-2 px-4 border-b text-left">Email <br/> <input
-                            type="text"
-                            placeholder="Search by Email"
+                            
+                        />
+                        <SearchInput
+                            label="Email"
                             value={searchByEmail}
                             onChange={(e) => setSearchByEmail(e.target.value)}
-                            className={`px-2 py-1 border rounded ${setInputWidth('email')}`}
-                        /></th>
-                        <th className="py-2 px-4 border-b text-left">Phone <br/><input
-                            type="text"
-                            placeholder="Search by Phone"
+                            
+                        />
+                        <SearchInput
+                            label="Phone"
                             value={searchByPhone}
                             onChange={(e) => setSearchByPhone(e.target.value)}
-                            className={`px-2 py-1 border rounded ${setInputWidth('phone')}`}
-                        /></th>
-                        <th className="py-2 px-4 border-b text-left">Creation Date <br/> <input
-                            type="text"
-                            placeholder="Search by Creation Date"
+                            
+                        />
+                        <SearchInput
+                            label="Creation Date"
                             value={searchByCreationDate}
                             onChange={(e) => setSearchByCreationDate(e.target.value)}
-                            className={`px-2 py-1 border rounded ${setInputWidth('creationDate')}`}
-                        /></th>
+                            
+                        />
                     </tr>
                 </thead>
                 <tbody>
