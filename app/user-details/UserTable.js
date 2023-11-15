@@ -22,39 +22,37 @@ const UserDetails = () => {
 
     return (
         <div>
-            <h1>User Details</h1>
+            <h1 className="text-2xl font-semibold mb-4">User Details</h1>
             <input
                 type="text"
                 placeholder="Search by username"
                 value={searchTerm}
                 onChange={handleSearch}
+                className="px-4 py-2 border rounded mb-4"
             />
 
-<div className="overflow-x-auto">
-  <table className="table-auto w-full border-collapse border border-gray-300">
-    <thead className="bg-black-200">
-      <tr>
-        <th className="border border-gray-300 px-4 py-2">ID</th>
-        <th className="border border-gray-300 px-4 py-2">Username</th>
-        <th className="border border-gray-300 px-4 py-2">Email</th>
-        <th className="border border-gray-300 px-4 py-2">Phone</th>
-        <th className="border border-gray-300 px-4 py-2">Creation Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      {filteredUsers.map((user) => (
-        <tr key={user.id} className="hover:bg-gray-100">
-          <td className="border border-gray-300 px-4 py-2">{user.id}</td>
-          <td className="border border-gray-300 px-4 py-2">{user.username}</td>
-          <td className="border border-gray-300 px-4 py-2">{user.email}</td>
-          <td className="border border-gray-300 px-4 py-2">{user.phone}</td>
-          <td className="border border-gray-300 px-4 py-2">{user.creationDate}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-</div>
-
+            <table className="min-w-full border border-gray-300">
+                <thead className="bg-gray-200">
+                    <tr>
+                        <th className="py-2 px-4 border-b">ID</th>
+                        <th className="py-2 px-4 border-b">Username</th>
+                        <th className="py-2 px-4 border-b">Email</th>
+                        <th className="py-2 px-4 border-b">Phone</th>
+                        <th className="py-2 px-4 border-b">Creation Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {filteredUsers.map((user) => (
+                        <tr key={user.id} className="hover:bg-gray-100">
+                            <td className="py-2 px-4 border-b">{user.id}</td>
+                            <td className="py-2 px-4 border-b">{user.username}</td>
+                            <td className="py-2 px-4 border-b">{user.email}</td>
+                            <td className="py-2 px-4 border-b">{user.phone}</td>
+                            <td className="py-2 px-4 border-b">{user.creationDate}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 };
