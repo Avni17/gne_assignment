@@ -82,8 +82,8 @@ const UserDetails = () => {
                 {/* Pass selectedRow to the Report component */}
                 {selectedRow && <Report selectedRow={selectedRow} />}
             </Modal>
-            <table className=" border border-white-300">
-                <thead className="bg-black-200">
+            <table className=" border border-white-300 bg-white">
+                <thead className="">
                     <tr>
                         <SearchInput
                             label="ID"
