@@ -89,37 +89,41 @@ const UserDetails = () => {
                             label="ID"
                             value={searchById}
                             onChange={(e) => setSearchById(e.target.value)}
-                           
+
                         />
                         <SearchInput
                             label="Username"
                             value={searchByUsername}
                             onChange={(e) => setSearchByUsername(e.target.value)}
-                            
+
                         />
                         <SearchInput
                             label="Email"
                             value={searchByEmail}
                             onChange={(e) => setSearchByEmail(e.target.value)}
-                            
+
                         />
                         <SearchInput
                             label="Phone"
                             value={searchByPhone}
                             onChange={(e) => setSearchByPhone(e.target.value)}
-                            
+
                         />
                         <SearchInput
                             label="Creation Date"
                             value={searchByCreationDate}
                             onChange={(e) => setSearchByCreationDate(e.target.value)}
-                            
+
                         />
                     </tr>
                 </thead>
                 <tbody>
                     {filteredUsers.map((user) => (
-                        <tr key={user.id} className="hover:bg-gray-100" onClick={() => handleRowClick(user)}>
+                        <tr
+                            key={user.id}
+                            className="hover:bg-green-100 hover:text-black cursor-pointer"
+                            onClick={() => handleRowClick(user)}
+                        >
                             <td className="py-2 px-4 border-b">{user.id}</td>
                             <td className="py-2 px-4 border-b">{user.username}</td>
                             <td className="py-2 px-4 border-b">{user.email}</td>
