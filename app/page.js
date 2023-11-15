@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <header className="py-4">
         <nav className="flex justify-left">
           <button
