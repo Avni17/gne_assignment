@@ -10,11 +10,11 @@ export default function Home() {
 
   const tabUnderlineStyle = {
     width: activeTab === 'userDetails' ? '50%' : '50%',
-    transform: activeTab === 'userDetails' ? 'translateX(50%)' : 'translateX(50%)',
+    transform: activeTab === 'userDetails' ? 'translateX(50%)' : 'translateX(55%)',
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <header className="py-4">
         <nav className="flex justify-left">
           <button
