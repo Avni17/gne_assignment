@@ -70,56 +70,49 @@ const UserDetails = () => {
         <div>
 
             <h1 className="text-2xl font-semibold mb-4">User Details</h1>
-            <input
+            {/* <input
                 type="text"
                 placeholder="Search all Columns"
                 value={searchTerm}
                 onChange={handleSearch}
                 className="px-4 py-2 border rounded mb-4"
-            />
+            /> */}
             <Modal isOpen={isModalOpen} onClose={toggleModal}>
                 {/* Pass selectedRow to the Report component */}
                 {selectedRow && <Report selectedRow={selectedRow} />}
             </Modal>
             <table className="min-w-full border border-gray-300">
-                <thead className="bg-gray-200">
+                <thead className="bg-black-200">
                     <tr>
-                        <th className="py-2 px-4 border-b text-left">ID</th>
-                        <th className="py-2 px-4 border-b text-left">Username</th>
-                        <th className="py-2 px-4 border-b text-left">Email</th>
-                        <th className="py-2 px-4 border-b text-left">Phone</th>
-                        <th className="py-2 px-4 border-b text-left">Creation Date</th>
-                    </tr>
-                    <tr>
-                        <th className="border-b text-left"> <input
+                        <th className="py-2 px-4 border-b text-left">ID <br/> <input
                             type="text"
                             placeholder="Search by ID"
                             value={searchById}
                             onChange={(e) => setSearchById(e.target.value)}
                             className={`px-2 py-1 border rounded ${setInputWidth('id')}`}
                         /></th>
-                        <th className="border-b text-left"> <input
+                        <th className="py-2 px-4 border-b text-left">Username <br/><input
                             type="text"
                             placeholder="Search by Username"
                             value={searchByUsername}
                             onChange={(e) => setSearchByUsername(e.target.value)}
                             className={`px-2 py-1 border rounded ${setInputWidth('username')}`}
                         /></th>
-                        <th className="border-b text-left"> <input
+                        <th className="py-2 px-4 border-b text-left">Email <br/> <input
                             type="text"
                             placeholder="Search by Email"
                             value={searchByEmail}
                             onChange={(e) => setSearchByEmail(e.target.value)}
                             className={`px-2 py-1 border rounded ${setInputWidth('email')}`}
                         /></th>
-                        <th className="border-b text-left"> <input
+                        <th className="py-2 px-4 border-b text-left">Phone <br/><input
                             type="text"
                             placeholder="Search by Phone"
                             value={searchByPhone}
                             onChange={(e) => setSearchByPhone(e.target.value)}
                             className={`px-2 py-1 border rounded ${setInputWidth('phone')}`}
                         /></th>
-                        <th className="border-b text-left"> <input
+                        <th className="py-2 px-4 border-b text-left">Creation Date <br/> <input
                             type="text"
                             placeholder="Search by Creation Date"
                             value={searchByCreationDate}
