@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="flex  justify-start">
-      <div className="bg-green w-1/6">
+      <div className="hidden md:block bg-green w-1/6">
 
       </div>
 
