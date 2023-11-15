@@ -86,7 +86,7 @@ const UserDetails = () => {
             </Modal>
             <div className="overflow-x-auto">
                 <table className="border border-white-300 bg-white">
-                    <thead className="hidden md:table-header-group">
+                    <thead className="md:table-header-group">
                         <tr>
                             <SearchInput label="ID" value={searchById} onChange={(e) => setSearchById(e.target.value)} />
                             <SearchInput label="Username" value={searchByUsername} onChange={(e) => setSearchByUsername(e.target.value)} />
@@ -106,11 +106,11 @@ const UserDetails = () => {
                                 className="hover:bg-green-100 hover:text-black cursor-pointer block md:table-row"
                                 onClick={() => handleRowClick(user)}
                             >
-                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.id}</td>
-                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.username}</td>
-                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.email}</td>
-                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.phone}</td>
-                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.creationDate}</td>
+                                <td className="py-2 px-4 border-b  overflow-hidden">{user.id}</td>
+                                <td className="py-2 px-4 border-b  overflow-hidden">{user.username}</td>
+                                <td className="py-2 px-4 border-b  overflow-hidden">{user.email}</td>
+                                <td className="py-2 px-4 border-b  overflow-hidden">{user.phone}</td>
+                                <td className="py-2 px-4 border-b  overflow-hidden">{user.creationDate}</td>
                             </tr>
                         ))}
                     </tbody>
