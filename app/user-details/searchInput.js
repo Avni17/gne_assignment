@@ -12,7 +12,7 @@ const SearchInput = ({ label, value, onChange }) => {
     return (
         <th className="py-2 px-4 border-b text-left relative" onClick={toggleInputVisibility}>
             {label} <br />
-            {isInputVisible && (
+            { (
                 <input
                     type="text"
                     placeholder={`Search by ${label}`}
