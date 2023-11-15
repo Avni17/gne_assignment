@@ -1,3 +1,7 @@
+import UserTable from './UserTable'
 export default function UserDetails() {
-    return <div>User Details</div>
-  }
+  return <><h1>User Details</h1>
+    <UserTable />
+
+  </>
+}
