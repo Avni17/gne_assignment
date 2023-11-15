@@ -10,18 +10,18 @@ export default function Home() {
 
   const tabUnderlineStyle = {
     width: activeTab === 'userDetails' ? '50%' : '50%',
-    transform: activeTab === 'userDetails' ? 'translateX(0)' : 'translateX(100%)',
+    transform: activeTab === 'userDetails' ? 'translateX(50%)' : 'translateX(100%)',
   };
 
   return (
     <div className="min-h-screen">
       <header className="py-4">
-        <nav className="flex justify-center">
+        <nav className="flex justify-left">
           <button
             onClick={() => setActiveTab('userDetails')}
             className={`relative px-6 py-2 focus:outline-none ${activeTab === 'userDetails'
-                ? 'text-blue-500'
-                : 'text-gray-500 hover:text-blue-500'
+              ? 'text-blue-500'
+              : 'text-gray-500 hover:text-blue-500'
               }`}
           >
             User Details
@@ -35,8 +35,8 @@ export default function Home() {
           <button
             onClick={() => setActiveTab('accountCreation')}
             className={`relative px-6 py-2 focus:outline-none ${activeTab === 'accountCreation'
-                ? 'text-blue-500'
-                : 'text-gray-500 hover:text-blue-500'
+              ? 'text-blue-500'
+              : 'text-gray-500 hover:text-blue-500'
               }`}
           >
             Account Creation
