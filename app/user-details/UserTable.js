@@ -69,15 +69,17 @@ const UserDetails = () => {
     });
     return (
         <div>
+            <div className="flex justify-between">
+                <h1 className="text-2xl font-semibold mb-4">User Details</h1>
+                <input
+                    type="text"
+                    placeholder="Search all Columns"
+                    value={searchTerm}
+                    onChange={handleSearch}
+                    className="px-4 py-2 border rounded mb-4"
+                />
+            </div>
 
-            <h1 className="text-2xl font-semibold mb-4">User Details</h1>
-            <input
-                type="text"
-                placeholder="Search all Columns"
-                value={searchTerm}
-                onChange={handleSearch}
-                className="px-4 py-2 border rounded mb-4"
-            />
             <Modal isOpen={isModalOpen} onClose={toggleModal}>
                 {/* Pass selectedRow to the Report component */}
                 {selectedRow && <Report selectedRow={selectedRow} />}
