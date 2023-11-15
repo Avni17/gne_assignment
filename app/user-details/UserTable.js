@@ -22,32 +22,33 @@ const UserDetails = () => {
 
     return (
         <div>
-            <h1>User Details</h1>
+            <h1 className="text-2xl font-semibold mb-4">User Details</h1>
             <input
                 type="text"
                 placeholder="Search by username"
                 value={searchTerm}
                 onChange={handleSearch}
+                className="px-4 py-2 border rounded mb-4"
             />
 
-            <table>
-                <thead>
+            <table className="min-w-full border border-gray-300">
+                <thead className="bg-gray-200">
                     <tr>
-                        <th>ID</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Creation Date</th>
+                        <th className="py-2 px-4 border-b">ID</th>
+                        <th className="py-2 px-4 border-b">Username</th>
+                        <th className="py-2 px-4 border-b">Email</th>
+                        <th className="py-2 px-4 border-b">Phone</th>
+                        <th className="py-2 px-4 border-b">Creation Date</th>
                     </tr>
                 </thead>
                 <tbody>
                     {filteredUsers.map((user) => (
-                        <tr key={user.id}>
-                            <td>{user.id}</td>
-                            <td>{user.username}</td>
-                            <td>{user.email}</td>
-                            <td>{user.phone}</td>
-                            <td>{user.creationDate}</td>
+                        <tr key={user.id} className="hover:bg-gray-100">
+                            <td className="py-2 px-4 border-b">{user.id}</td>
+                            <td className="py-2 px-4 border-b">{user.username}</td>
+                            <td className="py-2 px-4 border-b">{user.email}</td>
+                            <td className="py-2 px-4 border-b">{user.phone}</td>
+                            <td className="py-2 px-4 border-b">{user.creationDate}</td>
                         </tr>
                     ))}
                 </tbody>
