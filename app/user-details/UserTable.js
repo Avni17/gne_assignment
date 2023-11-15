@@ -15,37 +15,32 @@ const UserDetails = () => {
         setUsers(userData.users);
     }, []);
 
+    // State for column widths
+    const [columnWidths, setColumnWidths] = useState({});
+
+    // Effect to calculate column widths on component mount
+    useEffect(() => {
+        // Your logic to calculate column widths based on your styling and layout
+        const widths = {
+            id: 'w-16',  // Adjust as needed
+            username: 'w-32',
+            email: 'w-40',
+            phone: 'w-24',
+            creationDate: 'w-40',
+        };
+
+        setColumnWidths(widths);
+    }, []);
+
+    // Function to set the width of the input based on the column
+    const setInputWidth = (column) => {
+        return columnWidths[column] || 'w-32'; // Default width if not set
+    };
+
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
     };
 
-    const filterById = (users, searchTerm) => {
-        return users.filter((user) => user.id.toString().includes(searchTerm));
-    };
-
-    const filterByUsername = (users, searchTerm) => {
-        return users.filter((user) =>
-            user.username.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    };
-
-    const filterByEmail = (users, searchTerm) => {
-        return users.filter((user) =>
-            user.email.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    };
-
-    const filterByPhone = (users, searchTerm) => {
-        return users.filter((user) =>
-            user.phone.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    };
-
-    const filterByCreationDate = (users, searchTerm) => {
-        return users.filter((user) =>
-            user.creationDate.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-    };
     // Filter users based on the search term
     const filteredUsers = users.filter((user) => {
         const matchesSearch = user.id.toString().includes(searchTerm) || user.username.toLowerCase().includes(searchTerm.toLowerCase()) || user.email.toLowerCase().includes(searchTerm.toLowerCase()) || user.phone.toLowerCase().includes(searchTerm.toLowerCase()) || user.creationDate.toLowerCase().includes(searchTerm.toLowerCase());
@@ -69,7 +64,7 @@ const UserDetails = () => {
                 className="px-4 py-2 border rounded mb-4"
             />
 
-            <table className="min-w-full border border-gray-300">
+            <table className=" border border-gray-300">
                 <thead className="bg-gray-200">
                     <tr>
                         <th className="py-2 px-4 border-b text-left">ID</th>
@@ -84,35 +79,35 @@ const UserDetails = () => {
                             placeholder="Search by ID"
                             value={searchById}
                             onChange={(e) => setSearchById(e.target.value)}
-                            className="px-4 py-2 border rounded mb-4 w-32"
+                            className={`px-2 py-1 border rounded ${setInputWidth('id')}`}
                         /></th>
                         <th className="border-b text-left"> <input
                             type="text"
                             placeholder="Search by Username"
                             value={searchByUsername}
                             onChange={(e) => setSearchByUsername(e.target.value)}
-                            className="px-4 py-2 border rounded mb-4 w-32"
+                            className={`px-2 py-1 border rounded ${setInputWidth('username')}`}
                         /></th>
                         <th className="border-b text-left"> <input
                             type="text"
                             placeholder="Search by Email"
                             value={searchByEmail}
                             onChange={(e) => setSearchByEmail(e.target.value)}
-                            className="px-4 py-2 border rounded mb-4 w-48"
+                            className={`px-2 py-1 border rounded ${setInputWidth('email')}`}
                         /></th>
                         <th className="border-b text-left"> <input
                             type="text"
                             placeholder="Search by Phone"
                             value={searchByPhone}
                             onChange={(e) => setSearchByPhone(e.target.value)}
-                            className="px-4 py-2 border rounded mb-4 w-48"
+                            className={`px-2 py-1 border rounded ${setInputWidth('phone')}`}
                         /></th>
                         <th className="border-b text-left"> <input
                             type="text"
                             placeholder="Search by Creation Date"
                             value={searchByCreationDate}
                             onChange={(e) => setSearchByCreationDate(e.target.value)}
-                            className="px-4 py-2 border rounded mb-4 w-48"
+                            className={`px-2 py-1 border rounded ${setInputWidth('creationDate')}`}
                         /></th>
                     </tr>
                 </thead>
