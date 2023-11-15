@@ -126,11 +126,11 @@ const UserDetails = () => {
                             className="hover:bg-green-100 hover:text-black cursor-pointer"
                             onClick={() => handleRowClick(user)}
                         >
-                            <td className="py-2 px-4 border-b">{user.id}</td>
-                            <td className="py-2 px-4 border-b">{user.username}</td>
-                            <td className="py-2 px-4 border-b">{user.email}</td>
-                            <td className="py-2 px-4 border-b">{user.phone}</td>
-                            <td className="py-2 px-4 border-b">{user.creationDate}</td>
+                            <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.id}</td>
+                            <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.username}</td>
+                            <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.email}</td>
+                            <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.phone}</td>
+                            <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.creationDate}</td>
                         </tr>
                     ))}
                 </tbody>
