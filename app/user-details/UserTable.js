@@ -71,18 +71,18 @@ const UserDetails = () => {
         <div>
 
             <h1 className="text-2xl font-semibold mb-4">User Details</h1>
-            {/* <input
+            <input
                 type="text"
                 placeholder="Search all Columns"
                 value={searchTerm}
                 onChange={handleSearch}
                 className="px-4 py-2 border rounded mb-4"
-            /> */}
+            />
             <Modal isOpen={isModalOpen} onClose={toggleModal}>
                 {/* Pass selectedRow to the Report component */}
                 {selectedRow && <Report selectedRow={selectedRow} />}
             </Modal>
-            <table className="min-w-full border border-gray-300">
+            <table className=" border border-white-300">
                 <thead className="bg-black-200">
                     <tr>
                         <SearchInput

@@ -10,9 +10,9 @@ const SearchInput = ({ label, value, onChange }) => {
     };
 
     return (
-        <th className="py-2 px-4 border-b text-left relative" onClick={toggleInputVisibility}>
+        <th className="py-2 px-4 border-b text-left " onClick={toggleInputVisibility}>
             {label} <br />
-            { (
+            {(
                 <input
                     type="text"
                     placeholder={`Search by ${label}`}
