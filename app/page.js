@@ -10,7 +10,7 @@ export default function Home() {
 
   const tabUnderlineStyle = {
     width: activeTab === 'userDetails' ? '50%' : '50%',
-    transform: activeTab === 'userDetails' ? 'translateX(50%)' : 'translateX(100%)',
+    transform: activeTab === 'userDetails' ? 'translateX(50%)' : 'translateX(55%)',
   };
 
   return (
