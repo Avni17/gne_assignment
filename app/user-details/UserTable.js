@@ -76,7 +76,7 @@ const UserDetails = () => {
                     placeholder="Search all Columns"
                     value={searchTerm}
                     onChange={handleSearch}
-                    className="px-4 py-2 border rounded mb-4"
+                    className="px-4 py-2 border rounded mb-4 overflow-hidden"
                 />
             </div>
 
@@ -84,36 +84,38 @@ const UserDetails = () => {
                 {/* Pass selectedRow to the Report component */}
                 {selectedRow && <Report selectedRow={selectedRow} />}
             </Modal>
-            <table className="border border-white-300 bg-white">
-                <thead className="hidden md:table-header-group">
-                    <tr>
-                        <SearchInput label="ID" value={searchById} onChange={(e) => setSearchById(e.target.value)} />
-                        <SearchInput label="Username" value={searchByUsername} onChange={(e) => setSearchByUsername(e.target.value)} />
-                        <SearchInput label="Email" value={searchByEmail} onChange={(e) => setSearchByEmail(e.target.value)} />
-                        <SearchInput label="Phone" value={searchByPhone} onChange={(e) => setSearchByPhone(e.target.value)} />
-                        <SearchInput
-                            label="Creation Date"
-                            value={searchByCreationDate}
-                            onChange={(e) => setSearchByCreationDate(e.target.value)}
-                        />
-                    </tr>
-                </thead>
-                <tbody className="block md:table-row-group">
-                    {filteredUsers.map((user) => (
-                        <tr
-                            key={user.id}
-                            className="hover:bg-green-100 hover:text-black cursor-pointer block md:table-row"
-                            onClick={() => handleRowClick(user)}
-                        >
-                            <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.id}</td>
-                            <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.username}</td>
-                            <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.email}</td>
-                            <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.phone}</td>
-                            <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.creationDate}</td>
+            <div className="overflow-x-auto">
+                <table className="border border-white-300 bg-white">
+                    <thead className="hidden md:table-header-group">
+                        <tr>
+                            <SearchInput label="ID" value={searchById} onChange={(e) => setSearchById(e.target.value)} />
+                            <SearchInput label="Username" value={searchByUsername} onChange={(e) => setSearchByUsername(e.target.value)} />
+                            <SearchInput label="Email" value={searchByEmail} onChange={(e) => setSearchByEmail(e.target.value)} />
+                            <SearchInput label="Phone" value={searchByPhone} onChange={(e) => setSearchByPhone(e.target.value)} />
+                            <SearchInput
+                                label="Creation Date"
+                                value={searchByCreationDate}
+                                onChange={(e) => setSearchByCreationDate(e.target.value)}
+                            />
                         </tr>
-                    ))}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody className="block md:table-row-group">
+                        {filteredUsers.map((user) => (
+                            <tr
+                                key={user.id}
+                                className="hover:bg-green-100 hover:text-black cursor-pointer block md:table-row"
+                                onClick={() => handleRowClick(user)}
+                            >
+                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.id}</td>
+                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.username}</td>
+                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.email}</td>
+                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.phone}</td>
+                                <td className="py-2 px-4 border-b md:whitespace-nowrap overflow-hidden">{user.creationDate}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
 
 
         </div>
