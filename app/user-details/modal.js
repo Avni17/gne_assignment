@@ -12,8 +12,8 @@ const Modal = ({ isOpen, onClose, children }) => {
             <div className="bg-white p-8 rounded-lg shadow-lg text-black w-11/12 h-80 sm:w-96">
                 <div className="modal-content">
                     <i
-                        className="modal-close-btn bg-rose-500 cursor-pointer relative right-[-16rem] sm:right-[-19rem] top-[-0.5rem] z-50 fa fa-window-close"
-                        style={{ color: 'red', fontSize: '2em' }}
+                        className="modal-close-btn cursor-pointer relative right-[-16rem] sm:right-[-19rem] top-[-0.5rem] z-50 fa fa-window-close"
+                        style={{ color: 'red', fontSize: '1.8em' }}
                         onClick={onClose}
                     ></i>
                     {children}
