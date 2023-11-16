@@ -67,7 +67,7 @@ export default function Home() {
             </button>
           </nav>
         </header>
-        <main className={`p-4 ml-auto mb-2 mr-auto sm:ml-6 sm:mr-4 mt-4 border-4 rounded overflow-auto scroll-container h-[65vh] sm:h-[70vh] ${activeTab === 'userDetails' ? 'w-[90vw] sm:w-fit' : 'w-auto'}`} >
+        <main className={`p-4 ml-auto mb-2 mr-auto sm:ml-6 sm:mr-4 mt-4 border-4 rounded overflow-auto scroll-container h-[63vh] sm:h-[70vh] ${activeTab === 'userDetails' ? 'w-[90vw] sm:w-fit' : 'w-auto'}`} >
           {activeTab === 'userDetails' ? <UserDetails /> : <AccountCreation />}
         </main>
 
