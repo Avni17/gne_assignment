@@ -21,7 +21,7 @@ export default function Home() {
 `;
   return (
     <div className="flex  justify-start">
-      <div className="hidden md:block bg-lime md:w-1/7">
+      <div className="hidden md:block bg-lime-300	 md:w-1/7">
         <h1>Sidebar</h1>
       </div>
 

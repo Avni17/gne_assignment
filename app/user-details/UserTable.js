@@ -81,7 +81,7 @@ const UserDetails = () => {
                         {filteredUsers.length > 0 ? filteredUsers.map((user, index) => (
                             <tr
                                 key={user.id}
-                                className={`${index % 2 === 0 ? 'bg-teal' : 'bg-white'} hover:bg-green-100 hover:text-black cursor-pointer`}
+                                className={`${index % 2 === 0 ? 'bg-gray-50	' : 'bg-white'} hover:bg-green-100 hover:text-black cursor-pointer`}
                                 onClick={() => handleRowClick(user)}
                             >
                                 <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.id}</td>
