@@ -56,7 +56,7 @@ const Register = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white font-semibold py-2 rounded-md transition duration-300 focus:outline-none focus:bg-blue-600"
+              className="w-full bg-green-500 text-white font-semibold py-2 rounded-md transition duration-300 focus:outline-none focus:bg-blue-600"
               disabled={isLoading}
             >
               {isLoading ? 'Creating Account...' : 'Create Account'}
