@@ -16,10 +16,15 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 } */
 
+body
+{
+  overflow: hidden;
+}
+
 /* Styling for the scrollbar */
 .scroll-container::-webkit-scrollbar {
-  height: 7px !important;
-  width:9px !important;
+  height:0.5rem !important;
+  width:0.5rem !important;
 }
 
 /* Track */

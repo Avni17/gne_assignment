@@ -62,7 +62,7 @@ const UserDetails = () => {
                 {/* Pass selectedRow to the Report component */}
                 {selectedRow && <Report selectedRow={selectedRow} />}
             </Modal>
-            <div className="overflow-x-auto">
+            <div>
                 <table className="border-2 rounded border-gray-200 bg-white" >
                     <thead className="">
                         <tr>
