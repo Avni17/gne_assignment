@@ -28,7 +28,7 @@ export default function Home() {
       <div className="min-h-screen bg-white w-full md:w-6/7">
         <div className='px-6 py-2 '>
           <h1 className='text-xl font-semibold'>User Management</h1>
-          <div className='text-green-200'>
+          <div className='text-red-200'>
             <span className='inline-block' dangerouslySetInnerHTML={{ __html: svgMarkup }} />&nbsp;/&nbsp;
             User Management
           </div>
