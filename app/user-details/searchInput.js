@@ -16,9 +16,9 @@ const SearchInput = ({ label, value, onChange }) => {
         // Your logic to calculate column widths based on your styling and layout
         const widths = {
             ID: 'w-[7rem]',  // Adjust as needed
-            Username: 'w-[10rem]',
+            Username: 'w-[9rem]',
             Email: 'w-[12rem]',
-            Phone: 'w-[9.5rem]',
+            Phone: 'w-[8rem]',
             CreationDate: 'w-40',
         };
 
@@ -27,7 +27,7 @@ const SearchInput = ({ label, value, onChange }) => {
 
     // Function to set the width of the input based on the column
     const setInputWidth = (column) => {
-        return columnWidths[column] || 'w-[11.5rem]'; // Default width if not set
+        return columnWidths[column] || 'w-[10rem]'; // Default width if not set
     };
 
     return (
