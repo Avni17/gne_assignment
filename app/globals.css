@@ -1,6 +1,6 @@
-@import  'tailwindcss/base';
-@import  'tailwindcss/components';
-@import  'tailwindcss/utilities';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,29 +16,32 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 } */
 
-body
-{
+body {
   overflow: hidden;
 }
 
 /* Styling for the scrollbar */
 .scroll-container::-webkit-scrollbar {
-  height:0.5rem !important;
-  width:0.5rem !important;
+  height: 0.5rem !important;
+  width: 0.2rem !important;
 }
 
 /* Track */
 .scroll-container::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Color of the scrollbar track */
+  background: #f1f1f1;
+  /* Color of the scrollbar track */
 }
 
 /* Handle */
 .scroll-container::-webkit-scrollbar-thumb {
-  background: #39FF14; /* Color of the scrollbar handle */
-  border-radius: 10px; /* Rounded corners of the scrollbar handle */
+  background: rgb(163 163 163);
+  /* Color of the scrollbar handle */
+  border-radius: 1px;
+  /* Rounded corners of the scrollbar handle */
 }
 
 /* Handle on hover */
 .scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #39FF14; /* Color of the scrollbar handle on hover */
+  background: rgb(163 163 163);
+  /* Color of the scrollbar handle on hover */
 }

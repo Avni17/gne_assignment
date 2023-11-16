@@ -13,9 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+      </head>
       <body className={`${inter.className} scroll-container`}>
         <nav className="bg-white border-gray-200 bg-gray-900">
-          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <div className="mx-2 flex flex-wrap items-center justify-between p-4">
             <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
               <img src="/images/logo.png" className="h-8 w-8" alt="Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Greenie</span>
