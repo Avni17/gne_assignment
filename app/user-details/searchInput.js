@@ -39,7 +39,7 @@ const SearchInput = ({ label, value, onChange }) => {
                     placeholder={`Search by ${label}`}
                     value={value}
                     onChange={onChange}
-                    className={`px-2 py-1 border rounded text-black text-sm ${setInputWidth(label)}`}
+                    className={`px-2 py-1 border rounded text-black text-xs ${setInputWidth(label)}`}
                     onClick={handleInputClick}
                 />
             )}

@@ -24,9 +24,9 @@ export default function Home() {
 
       <div className="hidden  bg-lime-300	 md:w-1/7 md:flex   flex-col items-center  px-2 py-4">
 
-        <i className='fa fa-user' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
-        <i className='fa fa-gear' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
-        <i className='fas fa-file-invoice' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
+        <i className='fa fa-user' style={{ textAlign:'center',width:'35px',height:'35px',fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
+        <i className='fa fa-gear' style={{ textAlign:'center',width:'35px',height:'35px',fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
+        <i className='fas fa-file-invoice' style={{textAlign:'center', width:'35px',height:'35px',fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
       </div>
 
       <div className="min-h-screen bg-white w-full md:w-6/7">

@@ -6,7 +6,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     }
 
     return (
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 overflow-hidden">
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 overflow-hidden bg-gray-300">
             <head>        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
             </head>
             <div className="bg-white p-8 rounded-lg shadow-lg text-black w-11/12 h-80 sm:w-96">
