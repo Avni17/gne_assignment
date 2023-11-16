@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     colors: {
       transparent: 'transparent',
+      'teal': 'rgb(236 254 255)',
       'lime': '#bef264',
       'white': '#ffffff',
       'blue': {

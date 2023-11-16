@@ -63,7 +63,7 @@ const UserDetails = () => {
                 {selectedRow && <Report selectedRow={selectedRow} />}
             </Modal>
             <div className="overflow-x-auto">
-                <table className="border border-white-300 bg-white">
+                <table className="border-2 rounded border-gray-200 bg-white" >
                     <thead className="">
                         <tr>
                             <SearchInput label="ID" value={searchById} onChange={(e) => setSearchById(e.target.value)} />
@@ -78,10 +78,10 @@ const UserDetails = () => {
                         </tr>
                     </thead>
                     <tbody className="">
-                        {filteredUsers.length > 0 ? filteredUsers.map((user) => (
+                        {filteredUsers.length > 0 ? filteredUsers.map((user, index) => (
                             <tr
                                 key={user.id}
-                                className="hover:bg-green-100 hover:text-black cursor-pointer"
+                                className={`${index % 2 === 0 ? 'bg-teal' : 'bg-white'} hover:bg-green-100 hover:text-black cursor-pointer`}
                                 onClick={() => handleRowClick(user)}
                             >
                                 <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.id}</td>
