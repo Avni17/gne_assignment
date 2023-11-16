@@ -15,11 +15,11 @@ export default function Home() {
 
   return (
     <div className="flex  justify-start">
-      <div className="hidden md:block bg-green md:w-1/6">
-
+      <div className="hidden md:block bg-pink md:w-1/7">
+        <h1>Sidebar</h1>
       </div>
 
-      <div className="min-h-screen bg-white w-full md:w-5/6">
+      <div className="min-h-screen bg-white w-full md:w-6/7">
         <header className="py-4">
           <nav className="flex justify-left">
             <button
