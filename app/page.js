@@ -33,7 +33,7 @@ export default function Home() {
             User Management
           </div>
         </div>
-        <header className="py-4 ">
+        <header className=" ">
           <nav className="flex justify-left">
             <button
               onClick={() => setActiveTab('userDetails')}
