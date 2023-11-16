@@ -13,11 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} scroll-container`}>
         <nav className="bg-white border-gray-200 bg-gray-900">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-              <img src="/images/logo.jpg" className="h-8" alt="Logo" />
+              <img src="/images/logo.png" className="h-8 w-8" alt="Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Greenie</span>
             </a>
             <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

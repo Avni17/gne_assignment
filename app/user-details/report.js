@@ -44,7 +44,7 @@ const Report = ({ selectedRow }) => {
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-40">
 
 
-            <div className="bg-white p-6 rounded-lg shadow-lg text-black w-96 h-80">
+            <div className="bg-white p-6 rounded-lg shadow-lg text-black w-11/12 h-80 sm:w-96">
                 <h2 className="text-xl font-bold mb-4">User Analysis Report</h2>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', marginBottom: '8px' }}>
