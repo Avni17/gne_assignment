@@ -100,7 +100,7 @@ const UserDetails = () => {
                         </tr>
                     </thead>
                     <tbody className="">
-                        {filteredUsers.map((user) => (
+                        {filteredUsers.length > 0 ? filteredUsers.map((user) => (
                             <tr
                                 key={user.id}
                                 className="hover:bg-green-100 hover:text-black cursor-pointer"
@@ -112,7 +112,13 @@ const UserDetails = () => {
                                 <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.phone}</td>
                                 <td className="py-2 px-4 border-b whitespace-nowrap overflow-hidden">{user.creationDate}</td>
                             </tr>
-                        ))}
+                        )) : (
+                            <tr>
+                                <td colSpan="5" className="py-2 px-4 border-b text-center text-gray-200">
+                                    No results
+                                </td>
+                            </tr>
+                        )}
                     </tbody>
                 </table>
             </div>
