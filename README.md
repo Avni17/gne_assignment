@@ -37,13 +37,18 @@ The website is optimized for a high Lighthouse score and achieved a score of 100
 The project follows a well-defined folder structure to organize the code logically:
 ```
 project-root/
-|-- pages/
-|   |-- index.js
-|   |-- post.js
-|   |-- _app.js
-|   |---- user/
-|   |-----|-- [userid].js
-|   |-----|-- [userid].module.css
+|-- app/
+|   |-- layout.jsx
+|   |-- page.js
+|   |-- global.css
+|   |---- register/
+|   |-----|-- page.js
+|   |---- user-details/
+|   |-----|-- page.js
+|   |-----|-- modal.js
+|   |-----|-- report.js
+|   |-----|-- searchInput.js
+|   |-----|-- userTable.js
 |-- components/
 |   |-- Coverwithblurhash.js
 |   |-- Grid.js
