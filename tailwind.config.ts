@@ -11,7 +11,7 @@ const config: Config = {
       transparent: 'transparent',
       'lime': '#bef264',
       'white': '#ffffff',
-      'tahiti': {
+      'blue': {
         100: '#cffafe',
         200: '#a5f3fc',
         300: '#67e8f9',
