@@ -20,7 +20,7 @@ export default function Home() {
   </svg>
 `;
   return (
-    <div className="flex  justify-start">
+    <div className="flex  justify-start overflow-x-auto scroll-container">
       <div className="hidden md:block bg-lime-300	 md:w-1/7">
         <h1>Sidebar</h1>
       </div>
@@ -67,9 +67,10 @@ export default function Home() {
             </button>
           </nav>
         </header>
-        <main className={`p-4 ml-6 mb-2 mr-4 border-4 rounded ${activeTab === 'userDetails' ? 'w-fit' : 'w-auto'}`}>
+        <main className={`p-4 ml-6 mb-2 mr-4 border-4 rounded ${activeTab === 'userDetails' ? 'w-fit' : 'w-auto'}`} style={{ overflowX: 'auto' }}>
           {activeTab === 'userDetails' ? <UserDetails /> : <AccountCreation />}
         </main>
+
 
       </div>
     </div>
