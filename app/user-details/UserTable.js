@@ -70,7 +70,7 @@ const UserDetails = () => {
     return (
         <div>
             <div className="flex justify-between">
-                <h1 className="text-2xl font-semibold mb-4">User Details</h1>
+                <h1 className="text-xl font-semibold mb-4">User Details</h1>
                 <input
                     type="text"
                     placeholder="Search all Columns"
