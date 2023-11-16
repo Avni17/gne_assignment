@@ -18,28 +18,6 @@ const UserDetails = () => {
         setUsers(userData.users);
     }, []);
 
-    // State for column widths
-    const [columnWidths, setColumnWidths] = useState({});
-
-    // Effect to calculate column widths on component mount
-    useEffect(() => {
-        // Your logic to calculate column widths based on your styling and layout
-        const widths = {
-            id: 'w-16',  // Adjust as needed
-            username: 'w-16',
-            email: 'w-16',
-            phone: 'w-24',
-            creationDate: 'w-40',
-        };
-
-        setColumnWidths(widths);
-    }, []);
-
-    // Function to set the width of the input based on the column
-    const setInputWidth = (column) => {
-        return columnWidths[column] || 'w-32'; // Default width if not set
-    };
-
     const handleSearch = (event) => {
         setSearchTerm(event.target.value);
     };
