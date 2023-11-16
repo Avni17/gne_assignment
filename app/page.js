@@ -24,9 +24,9 @@ export default function Home() {
 
       <div className="hidden  bg-lime-300	 md:w-1/7 md:flex   flex-col items-center  px-2 py-4">
 
-        <i class='fa fa-user' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
-        <i class='fa fa-gear' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
-        <i class='fas fa-file-invoice' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
+        <i className='fa fa-user' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
+        <i className='fa fa-gear' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
+        <i className='fas fa-file-invoice' style={{ fontSize: '1.5em', backgroundColor: ' rgb(226 232 240)', padding: '0.3rem', borderRadius: '5px', marginBottom: '1rem', }}></i>
       </div>
 
       <div className="min-h-screen bg-white w-full md:w-6/7">
