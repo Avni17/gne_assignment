@@ -27,7 +27,7 @@ const SearchInput = ({ label, value, onChange }) => {
 
     // Function to set the width of the input based on the column
     const setInputWidth = (column) => {
-        return columnWidths[column] || 'w-auto'; // Default width if not set
+        return columnWidths[column] || 'w-[11.5rem]'; // Default width if not set
     };
 
     return (
