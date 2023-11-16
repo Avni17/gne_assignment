@@ -49,28 +49,14 @@ project-root/
 |   |-----|-- report.js
 |   |-----|-- searchInput.js
 |   |-----|-- userTable.js
-|-- components/
-|   |-- Coverwithblurhash.js
-|   |-- Grid.js
-|   |-- Imageithblurhash.js
-|   |-- layout.js
-|   |-- Mycomponent.js
-|   |-- mypost.js
-|   |-- Navbar.js
-|   |-- post.js
-|   |-- singlepost.js
-|-- styles/
-|   |-- globals.css
-|   |-- Home.css
-|   |-- Home.scss
-|   |-- navbar.css
-|   |-- newsfeed.css
-|   |-- profile.css
-|-- utils/
-|   |-- api.js
-|   |-- helpers.js
 |-- public/
-|   |-- images/
+|   |---- database/
+|   |-----|-- user.json
+|   |---- images
+|   |-----|-- logo.png
+|   |-----|-- user.png
+|-- tailwind.config.js
+|-- next.config.js
 |-- package.json
 |-- ...
 
