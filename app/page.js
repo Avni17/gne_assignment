@@ -67,9 +67,10 @@ export default function Home() {
             </button>
           </nav>
         </header>
-        <main className="p-4 ml-6 mb-2 mr-4 border-4 rounded w-fit" >
+        <main className={`p-4 ml-6 mb-2 mr-4 border-4 rounded ${activeTab === 'userDetails' ? 'w-fit' : 'w-auto'}`}>
           {activeTab === 'userDetails' ? <UserDetails /> : <AccountCreation />}
         </main>
+
       </div>
     </div>
   );
