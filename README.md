@@ -4,6 +4,8 @@
 
 •This web application is designed to provide a user management dashboard with a seamless and efficient user experience. It features two primary tabs: User Details and Account Creation.
 
+[### Live Demo](https://gne-assignment.vercel.app/)
+
 ## Project Info
 
 This project uses NextJs and the contents are bundled using webpack.
@@ -12,7 +14,7 @@ This project uses NextJs and the contents are bundled using webpack.
 
 • Tailwind CSS 
 
-• PDF-LIB (To Generate Report)
+• PDF-LIB (To Print Generated Report)
 
 ### Features
 #### User Details Tab
