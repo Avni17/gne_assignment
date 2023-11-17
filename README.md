@@ -4,7 +4,7 @@
 
 •This web application is designed to provide a user management dashboard with a seamless and efficient user experience. It features two primary tabs: User Details and Account Creation.
 
-[### Live Demo](https://gne-assignment.vercel.app/)
+[Live Demo](https://gne-assignment.vercel.app/)
 
 ## Project Info
 
