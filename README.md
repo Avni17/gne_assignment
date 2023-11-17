@@ -31,7 +31,7 @@ This project uses NextJs and the contents are bundled using webpack.
 • Implements dummy request handling upon form submission.
 
 #### Lighthouse Score
-The website is optimized for a high Lighthouse score and achieved a score of 100 while testing it (Report attached).
+The website is optimized for a high Lighthouse score and achieved a score of 100 while testing it [Report attached](./Lighthouse%20Report.pdf).
 
 #### Folder Structure
 The project follows a well-defined folder structure to organize the code logically:
