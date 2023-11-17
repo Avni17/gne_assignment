@@ -68,7 +68,7 @@ project-root/
 ##### Clone the repository
 
 ```bash
-git clone [https://github.com/Avni17/gne_assignment.git]
+git clone https://github.com/Avni17/gne_assignment.git
 ```
 
 ##### Move to the desired folder
