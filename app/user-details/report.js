@@ -48,6 +48,10 @@ const Report = ({ selectedRow }) => {
                 <h2 className="text-xl font-bold mb-4">User Analysis Report</h2>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <div style={{ display: 'flex', marginBottom: '8px' }}>
+                        <span style={{ width: '120px', textAlign: 'left' }}>ID:</span>
+                        <span style={{ textAlign: 'left' }}>{selectedRow.id}</span>
+                    </div>
+                    <div style={{ display: 'flex', marginBottom: '8px' }}>
                         <span style={{ width: '120px', textAlign: 'left' }}>Name:</span>
                         <span style={{ textAlign: 'left' }}>{selectedRow.username}</span>
                     </div>
